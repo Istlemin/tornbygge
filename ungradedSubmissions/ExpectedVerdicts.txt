@@ -1,0 +1,8 @@
+greedy         WA  WA  WA  WA
+LIS            WA  WA  WA  WA
+brute          AC  TLE TLE TLE
+dp2LowHeights  AC? WA  WA  TLE
+dpNoSort       AC  AC  WA  TLE
+dpWrongSort    AC  AC  WA  TLE
+dp             AC  AC  AC  TLE
+dpSegTree      AC  AC  AC  AC
