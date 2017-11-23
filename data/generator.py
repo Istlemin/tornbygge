@@ -1,13 +1,13 @@
 import sys
 from random import randint, seed, uniform, shuffle
 
-def gen(n=100000, iWidth=0, genType=1, maxHW=100000):
+def gen(n=100000, iWidth=0, genType=1, maxW=10000000, maxH=100000):
 	w = []
 	for i in range(n):
 		if randint(1,5) == 1 and i != 0:
 			w.append(w[randint(0,i-1)])
 		else:
-			w.append(randint(1,maxHW))
+			w.append(randint(1,maxW))
 
 	w.sort()
 	w.reverse()
@@ -24,7 +24,7 @@ def gen(n=100000, iWidth=0, genType=1, maxHW=100000):
 			if randint(0,8) == 0 and i != 0:
 				newBlock[1] = blocks[randint(0,i-1)][1];
 			else:
-				newBlock[1] = randint(1,maxHW)
+				newBlock[1] = randint(1,maxH)
 			blocks.append(newBlock)
 
 	if genType == 2:#increasing heights with small perturbations
@@ -33,7 +33,7 @@ def gen(n=100000, iWidth=0, genType=1, maxHW=100000):
 			if randint(1,20) == 1 and i != 0:
 				h.append(h[randint(0,i-1)])
 			else:
-				h.append(randint(1,maxHW))
+				h.append(randint(1,maxH))
 
 		h.sort()
 
