@@ -2,7 +2,7 @@
 Lille Fredrik vill bygga ett så högt torn som möjligt med sina N klossar. Alla klossar är rätblock med en kvadratisk botten, och ett torn är en mängd med klossar som är staplade direkt ovanpå varandra (det får inte ligga två klossar bredvid varandra). För att tornet inte ska bli instabilt och rasa måste varje kloss bredd (alltså sidan på den kvadratiska botten den står på) alltid vara strikt mindre än bredden av klossen den står på. Alltså byggs tornet med de bredaste klossarna i botten, och smalare klossar ju högre upp man kommer. Dessutom måste även varje kloss vara minst lika högt som klossen nedanför, för att tornet ska bli snyggt. Hjälp Fredrik att räkna ut hur högt torn han maximalt kan bygga.
 
 \section*{Indata}
-Den första raden innehåller ett heltal $N$, antalet klossar Fredrik har. Därefter följer $N$ rader, en för varje kloss. På den $i$:te av dessa rader står två heltal, det $i$:te blockets bredd $W_i$, $1 \leq W_i \leq 10^9$ och $H_i$, $1 \leq H_i \leq 10^9$ .
+Den första raden innehåller ett heltal $N$, antalet klossar Fredrik har. Därefter följer $N$ rader, en för varje kloss. På den $i$:te av dessa rader står två heltal, det $i$:te blockets bredd $W_i$, $1 \leq W_i \leq 10^9$ och höjd $H_i$, $1 \leq H_i \leq 10^9$.
 
 \section*{Output}
 Skriv ut en rad med ett heltal: den maximala höjden som Fredrik kan bygga. Detta tal garanteras vara mindre än $10^9$.
@@ -10,12 +10,11 @@ Skriv ut en rad med ett heltal: den maximala höjden som Fredrik kan bygga. Dett
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
-
 \begin{tabular}{|l|l|l|l|}
 \hline
 Grupp & Poängvärde & Gränser & Övrigt \\ \hline
- 1     & 21         & 1 \leg $N \leq 10$ & W_\\ \hline
- 2     & 36         & 1 \leg $N \leq 500$ & nada\\ \hline
- 3     & 27         & 1 \leg $N \leq 1000$ & nada\\ \hline
- 4     & 16         & 1 \leg $N \leq 10000$ & nada\\ \hline
+1     & 21         & $1 \leq N \leq 10$ & $W_i = N+1 - i$, d.v.s. bredderna är $N$, $N-1$, \dots, $1$, i ordning. \\ \hline
+2     & 36         & $1 \leq N \leq 500$ & $W_i = N+1 - i$ \\ \hline
+3     & 27         & $1 \leq N \leq 1000$ & \\ \hline
+4     & 16         & $1 \leq N \leq 10000$ & \\ \hline
 \end{tabular}
